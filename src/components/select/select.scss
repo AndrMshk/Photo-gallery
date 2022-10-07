@@ -1,0 +1,44 @@
+@import "../../common/styles/mixins";
+@import "../../common/styles/variables";
+
+.select {
+	width: 60px;
+	height: 68%;
+	position: relative;
+	font-weight: bold;
+	font-size: 20px;
+	.items {
+		@include flex(space-between, column, center);
+		border-radius: 5px;
+		width: 100%;
+		position: absolute;
+		top: -130px;
+		background-color: white;
+		border: 3px gray solid;
+		gap: 5px;
+		padding: 5px;
+		transition: all 0.3s;
+	}
+	.items div:hover, .items .hover {
+		cursor: pointer;
+		transition: all 0.3s;
+		border-radius: 5px;
+		gap: 5px;
+		text-align: center;
+		width: 80%;
+		background-color: gray;
+		color: white;
+	}
+	.items.current {
+		@include flex(center, row, center);
+		cursor: pointer;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+}
+
+
+
+

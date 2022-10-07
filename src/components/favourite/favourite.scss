@@ -1,0 +1,9 @@
+@import "./src/common/styles/mixins";
+@import "./src/common/styles/variables";
+
+.favourite-wrapper {
+	@include flex(flex-start, column, center);
+	margin-top: 60px;
+	width: 100%;
+	gap: 20px
+}

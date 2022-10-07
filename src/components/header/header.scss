@@ -1,0 +1,76 @@
+@import "./src/common/styles/mixins";
+@import "./src/common/styles/variables";
+
+.header-wrapper {
+	position: fixed;
+	z-index: 20;
+	width: 100%;
+	height: 50px;
+	background-color: $primaryColor;
+	box-shadow: 0 3px 10px black;
+	.favourite {
+		@include flex(center, row, center);
+		margin-right: 10px;
+		.text {
+			color: $mainColor;
+			margin-right: 10px;
+			@media (max-width: 370px) {
+				display: none;
+			}
+		}
+		.toggle-favourite {
+			position: absolute;
+			left: -100vw;
+		}
+		.toggle-favourite:checked + label {
+			color: $heartColor;
+			-webkit-filter: none;
+			filter: none;
+			will-change: font-size;
+			-webkit-animation: heart 1s cubic-bezier(0.17, 0.89, 0.32, 1.49);
+			animation: heart 1s cubic-bezier(0.17, 0.89, 0.32, 1.49);
+		}
+		label {
+			z-index: 20;
+			align-self: center;
+			position: relative;
+			color: #888;
+			font-size: 2em;
+			-webkit-filter: grayscale(1);
+			filter: grayscale(1);
+			-webkit-user-select: none;
+			-moz-user-select: none;
+			-ms-user-select: none;
+			user-select: none;
+			cursor: pointer;
+		}
+		label:before, label:after {
+			position: absolute;
+			z-index: -1;
+			top: 50%;
+			left: 50%;
+			border-radius: 50%;
+			content: '';
+		}
+		label:before {
+			box-sizing: border-box;
+			margin: -2.25rem;
+			border: solid 2.25rem $heartColor;
+			width: 4.5rem;
+			height: 4.5rem;
+			-webkit-transform: scale(0);
+			transform: scale(0);
+		}
+	}
+	&:hover .like {
+		opacity: 0.7;
+		transition: opacity 0.3s;
+	}
+	.title {
+		text-align: center;
+		width: 100%;
+		color: $mainColor;
+		font-size: 30px;
+		font-weight: bold;
+	}
+}
