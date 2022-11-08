@@ -1,6 +1,6 @@
 # Photo-gallery
 
-##Stack:
+## Stack:
 -   TypeScript 
 -   React
 -   Redux 
