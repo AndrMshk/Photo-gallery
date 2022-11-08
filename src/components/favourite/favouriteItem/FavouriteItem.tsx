@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import './favourite-item.scss';
-import deleteIcon from '../../common/assets/delete-icon.svg';
+import deleteIcon from '../../../common/assets/delete-icon.svg';
 
 type FavouriteItemPropsType = {
   author: string

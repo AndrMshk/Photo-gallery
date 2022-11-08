@@ -4,7 +4,7 @@ import './app.scss';
 import { ProjectRoutes } from '../routes/ProjectRoutes';
 import { useAppDispatch, useAppSelector } from '../../bll/store';
 import { Header } from '../header/Header';
-import { ErrorMessage } from '../errorMessage/ErrorMessage';
+import { ErrorMessage } from '../common/errorMessage/ErrorMessage';
 import { setPhotos } from '../../bll/asyncActions';
 import { Pagination } from '../pagination/Pagination';
 import { useNavigate } from 'react-router-dom';

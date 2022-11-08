@@ -2,7 +2,7 @@ import React from 'react';
 import { Navigate, Route, Routes } from "react-router-dom";
 import { Photos } from '../photos/Photos';
 import { Favourite } from '../favourite/Favourite';
-import { PageNotFound } from '../pageNotFound/PageNotFound';
+import { PageNotFound } from '../common/pageNotFound/PageNotFound';
 
 export const ProjectRoutes = () => {
   return (

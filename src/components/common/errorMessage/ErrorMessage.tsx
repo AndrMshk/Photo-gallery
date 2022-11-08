@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import './error-meggage.scss';
-import { useAppDispatch } from '../../bll/store';
-import { setErrorAction } from '../../bll/appReducer';
+import { useAppDispatch } from '../../../bll/store';
+import { setErrorAction } from '../../../bll/appReducer';
 
 type ErrorMessagePropsType = {
   error?: string

@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import './favourite.scss';
 import { useAppDispatch, useAppSelector } from '../../bll/store';
-import { FavouriteItem } from '../favourite-item/FavouriteItem';
+import { FavouriteItem } from './favouriteItem/FavouriteItem';
 import { ItemType } from '../../api/types';
 import { removeFromFavouriteAction, setIsShowFavouriteAction } from '../../bll/photosReducer';
 import { saveState } from '../../utils/localStorage';
-import { PhotoModal } from '../photo-modal/PhotoModal';
+import { PhotoModal } from '../photos/photoModal/PhotoModal';
 
 export const Favourite = () => {
 
